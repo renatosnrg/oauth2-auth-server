@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Renato Neves"]
   s.email       = ["renatosn_rg@yahoo.com.br"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{An implementation of OAuth2 Authorization Server}
+  s.description = %q{An implementation of OAuth2 Authorization Server}
 
   s.rubyforge_project = "oauth2-auth-server"
 
@@ -17,4 +17,6 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+
+  s.add_dependency("rack-oauth2", "~> 0.14.0")
 end
