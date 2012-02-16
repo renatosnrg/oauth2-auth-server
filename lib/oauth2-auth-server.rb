@@ -1,6 +1,4 @@
 require 'rack/oauth2'
-require 'rails'
-require 'active_support/dependencies'
 
 require 'oauth2-auth-server/version'
 require 'oauth2-auth-server/schema'
