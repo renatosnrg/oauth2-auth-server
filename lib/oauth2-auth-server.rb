@@ -1,18 +1,19 @@
+require 'rails'
 require 'rack/oauth2'
-
 require 'oauth2-auth-server/version'
-require 'oauth2-auth-server/schema'
-require 'oauth2-auth-server/routes'
 
 module OAuth2
   module Auth
     module Server
       autoload :SecureToken, 'oauth2-auth-server/secure_token'
-      autoload :Authentication, 'oauth2-auth-server/authentication'
 
       module Endpoints
         autoload :Authorize, 'oauth2-auth-server/endpoints/authorize'
         autoload :Token, 'oauth2-auth-server/endpoints/token'
+      end
+
+      module Controllers
+        autoload :Helpers, 'oauth2-auth-server/controllers/helpers'
       end
 
       module Models
@@ -36,6 +37,14 @@ module OAuth2
           AccessToken.valid.find_by_token(req.access_token) || req.invalid_token!
         end
       end
+
+      def self.include_helpers
+        ActiveSupport.on_load(:action_controller) do
+          include Controllers::Helpers
+        end
+      end
     end
   end
 end
+
+require 'oauth2-auth-server/rails'
