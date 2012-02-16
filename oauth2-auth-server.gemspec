@@ -4,7 +4,7 @@ require "oauth2-auth-server/version"
 
 Gem::Specification.new do |s|
   s.name        = "oauth2-auth-server"
-  s.version     = Oauth2::Auth::Server::VERSION
+  s.version     = OAuth2::Auth::Server::VERSION
   s.authors     = ["Renato Neves"]
   s.email       = ["renatosn_rg@yahoo.com.br"]
   s.homepage    = ""

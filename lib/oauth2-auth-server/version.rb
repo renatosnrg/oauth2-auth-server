@@ -1,7 +1,7 @@
-module Oauth2
+module OAuth2
   module Auth
     module Server
-      VERSION = "0.0.1"
+      VERSION = "0.0.2"
     end
   end
 end

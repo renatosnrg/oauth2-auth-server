@@ -1,10 +1,10 @@
-module Oauth2
+module OAuth2
   module Auth
     module Server
       module Models
         class AccessToken < ActiveRecord::Base
           cattr_accessor :default_lifetime
-          self.default_lifetime = Oauth2::Auth::Server.default_lifetime
+          self.default_lifetime = OAuth2::Auth::Server.default_lifetime
 
           belongs_to :client
 

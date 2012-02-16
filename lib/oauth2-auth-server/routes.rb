@@ -1,6 +1,6 @@
 # require 'action_dispatch/routing/mapper'
 
-module Oauth2
+module OAuth2
   module Auth
     module Server
       module ActionDispatch::Routing

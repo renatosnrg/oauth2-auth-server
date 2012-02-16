@@ -4,7 +4,7 @@ require 'oauth2-auth-server/version'
 require 'oauth2-auth-server/schema'
 require 'oauth2-auth-server/routes'
 
-module Oauth2
+module OAuth2
   module Auth
     module Server
       autoload :SecureToken, 'oauth2-auth-server/secure_token'

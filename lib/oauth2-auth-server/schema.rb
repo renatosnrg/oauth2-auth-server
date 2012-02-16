@@ -1,6 +1,6 @@
 require 'active_record/connection_adapters/abstract/schema_definitions'
 
-module Oauth2
+module OAuth2
   module Auth
     module Server
       module Schema
@@ -22,5 +22,5 @@ module Oauth2
   end
 end
 
-ActiveRecord::ConnectionAdapters::Table.send :include, Oauth2::Auth::Server::Schema
-ActiveRecord::ConnectionAdapters::TableDefinition.send :include, Oauth2::Auth::Server::Schema
+ActiveRecord::ConnectionAdapters::Table.send :include, OAuth2::Auth::Server::Schema
+ActiveRecord::ConnectionAdapters::TableDefinition.send :include, OAuth2::Auth::Server::Schema
